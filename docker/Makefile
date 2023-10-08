@@ -15,7 +15,7 @@ TTY := $(shell bash -c "tty -s && echo '-t' || true")
 dkr := docker run --rm -i $(TTY) \
         -v $(CODE):/code \
         -v $(WK):/wk \
-        -e TZ=Australia/Sydney \
+        -e TZ=Europe/Athens \
         $(BUILDER_IMG)
 
 all: dkr
